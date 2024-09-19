@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "python-practice"
+description = ""
+authors = ["Jack Plowman <62281988+JackPlowman@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
