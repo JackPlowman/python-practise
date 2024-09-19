@@ -67,3 +67,21 @@ jobs:
 
       - name: Check Python Code Format (Ruff)
         run: just ruff-format
+
+  check-markdown-links:
+    name: Check Markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check Markdown links
+        uses: UmbrellaDocs/action-linkspector@v1.2.1
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          config_file: .github/other-configurations/.linkspector.yml
+          reporter: github-pr-review
+          fail_on_error: true
+          filter_mode: nofilter
