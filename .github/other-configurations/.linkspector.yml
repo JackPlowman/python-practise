@@ -2,3 +2,5 @@ dirs:
   - ./
 aliveStatusCodes:
   - 200
+ignorePatterns:
+  - pattern: "^https://leetcode.com/problems/.*$"
