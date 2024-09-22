@@ -1,5 +1,5 @@
 {
-  "python.testing.cwd": "${workspaceFolder}/analyser",
+  "python.testing.cwd": "${workspaceFolder}/challenges",
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": true,
