@@ -20,7 +20,7 @@ install:
     poetry install
 
 test:
-    poetry run pytest
+    poetry run pytest challenges --cov=challenges --cov-report=xml
 
 # ------------------------------------------------------------------------------
 # Ruff - # Set up red-knot when it's ready
