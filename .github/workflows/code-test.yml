@@ -25,6 +25,9 @@ jobs:
       - name: Run Unit Tests
         run: just test
 
+      - name: Override Coverage Source Path for SonarCloud
+        run: sed -i "s/<source>\/home\/runner\/work\/python-practice\/python-practice<\/source>/<source>\/github\/workspace<\/source>/g" /home/runner/work/python-practice/python-practice/coverage.xml
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v3.1.0
         env:
