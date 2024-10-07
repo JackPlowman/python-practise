@@ -19,26 +19,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Poetry
-        run: pipx install poetry
-
-      - name: Install Python 3.12 with Poetry Cache
-        uses: actions/setup-python@v5
-        with:
-          python-version-file: ".python-version"
-          cache: "poetry"
-
-      - name: Set up Just
-        uses: extractions/setup-just@v2
-
-      - name: Install Poetry Dependencies
-        run: just install
+      - name: Setup Dependencies
+        uses: ./.github/actions/setup-dependencies
 
       - name: Run Unit Tests
         run: just test
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v3.0.0
+        uses: SonarSource/sonarcloud-github-action@v3.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
