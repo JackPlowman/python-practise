@@ -23,6 +23,6 @@ This is a collection of my Python code challenges and solutions.
 
 ## Example Challenge Folder Structure
 
-`README.md` - A readme file describing the challenge
-`challenge.py` - The solution to the challenge
-`test_challenge.py` - A test file to verify the solution
+- `README.md` - A readme file describing the challenge
+- `challenge.py` - The solution to the challenge
+- `test_challenge.py` - A test file to verify the solution
