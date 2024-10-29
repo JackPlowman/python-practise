@@ -2,6 +2,19 @@
 # General Commands
 # ------------------------------------------------------------------------------
 
+# Install python dependencies
+install:
+    poetry install
+
+# Runs unit tests
+test:
+    poetry run pytest challenges --cov=. --cov-report=xml
+
+# ------------------------------------------------------------------------------
+# Cleaning Commands
+# ------------------------------------------------------------------------------
+
+# Remove all generated files
 clean:
     find . \( \
       -name '__pycache__' -o \
@@ -16,29 +29,29 @@ clean:
       -name 'db.sqlite3' \
     \) -print | xargs rm -rfv
 
-install:
-    poetry install
-
-test:
-    poetry run pytest challenges --cov=. --cov-report=xml
-
 # ------------------------------------------------------------------------------
-# Ruff - # Set up red-knot when it's ready
+# Ruff - Python Linting and Formating
+# Set up ruff red-knot when it's ready
 # ------------------------------------------------------------------------------
 
+# Fix all Ruff issues
 ruff-fix:
     just ruff-lint-fix
     just ruff-format-fix
 
+# Check for Ruff issues
 ruff-lint:
     poetry run ruff check .
 
+# Fix Ruff lint issues
 ruff-lint-fix:
     poetry run ruff check . --fix
 
+# Check for Ruff format issues
 ruff-format:
     poetry run ruff format --check .
 
+# Fix Ruff format issues
 ruff-format-fix:
     poetry run ruff format .
 
@@ -46,9 +59,11 @@ ruff-format-fix:
 # Prettier
 # ------------------------------------------------------------------------------
 
+# Check files are prettier formatted
 prettier-check:
     prettier . --check
 
+# Format files with prettier
 prettier-format:
     prettier . --check --write
 
@@ -56,9 +71,11 @@ prettier-format:
 # Justfile
 # ------------------------------------------------------------------------------
 
+# Format Justfile
 format:
     just --fmt --unstable
 
+# Check Justfile format
 format-check:
     just --fmt --check --unstable
 
