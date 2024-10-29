@@ -71,13 +71,21 @@ prettier-format:
 # Justfile
 # ------------------------------------------------------------------------------
 
-# Format Justfile
-format:
+# Format the justfile
+just-format:
     just --fmt --unstable
 
-# Check Justfile format
-format-check:
+# Check if the justfile is formatted correctly
+just-format-check:
     just --fmt --check --unstable
+
+# ------------------------------------------------------------------------------
+# Git Leaks
+# ------------------------------------------------------------------------------
+
+# Detect secrets in the repos
+gitleaks-detect:
+    gitleaks detect --source .
 
 # ------------------------------------------------------------------------------
 # Git Hooks

@@ -19,7 +19,7 @@ just:
 shell:
   - any:
       - changed-files:
-          - any-glob-to-any-file: ["**/*.sh"]
+          - any-glob-to-any-file: ["**/*.sh", "pre-commit", "post-commit"]
 github_actions:
   - any:
       - changed-files:
