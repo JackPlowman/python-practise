@@ -10,5 +10,11 @@
     "**/__pycache__": true,
     "**/.ruff_cache": true,
     "**/.pytest_cache": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "pyproject.toml": "__init__.py, poetry.lock, coverage.xml, .coverage, .gitignore",
+    "challenge.py": "__init__.py, test_challenge.py, README.md"
   }
 }
