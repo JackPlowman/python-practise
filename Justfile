@@ -36,8 +36,8 @@ clean:
 
 # Fix all Ruff issues
 ruff-fix:
-    just ruff-lint-fix
     just ruff-format-fix
+    just ruff-lint-fix
 
 # Check for Ruff issues
 ruff-lint:
