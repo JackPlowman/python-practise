@@ -31,3 +31,6 @@ updates:
       python:
         patterns:
           - "*"
+        update-types:
+          - "patch"
+          - "minor"
