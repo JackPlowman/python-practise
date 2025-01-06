@@ -5,12 +5,14 @@ on:
     types: [opened, edited, synchronize]
 
 permissions:
-  pull-requests: write
+  contents: read
 
 jobs:
   labeller:
     name: Label Pull Request
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Label Pull Request
         uses: actions/labeler@v5.0.0
