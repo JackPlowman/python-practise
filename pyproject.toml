@@ -1,26 +1,27 @@
+[project]
+name = "python-practice"
+version = "1.0.0"
+requires-python = ">=3.13"
+dependencies = []
+
 [tool.poetry]
 name = "python-practice"
 package-mode = false
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.dependencies]
-python = "^3.13"
-
 [tool.poetry.group.dev.dependencies]
-ruff = "0.8.4"
+ruff = "0.8.6"
 pytest = "8.3.4"
 pytest-cov = "6.0.0"
+zizmor = "1.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
-line-length = 120
 target-version = "py313"
 
 [tool.ruff.lint]
-# Add the `line-too-long` rule to the enforced rule set.
-extend-select = ["E501"]
 select = ["ALL"]
 
 ignore = [
@@ -29,41 +30,19 @@ ignore = [
   "PLR2004", # Ignore magic value
   "D104",    # Ignore missing docstring in public package
   "D100",    # Ignore missing docstring in public module
-  "T201",    # Ignore print statements
-  "N802",    # Ignore function name should be lowercase
+  "SIM112",  # Ignore Lowercase environment variables (used for GitHub actions)
 ]
 
-# Allow autofix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []
 
-# Exclude a variety of commonly ignored directories.
-exclude = [
-  ".bzr",
-  ".direnv",
-  ".eggs",
-  ".git",
-  ".hg",
-  ".mypy_cache",
-  ".nox",
-  ".pants.d",
-  ".pytype",
-  ".ruff_cache",
-  ".svn",
-  ".tox",
-  ".venv",
-  "__pypackages__",
-  "_build",
-]
-
-# Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 [tool.ruff.lint.per-file-ignores]
 "test_*.py" = ["S101", "D102", "D103", "SLF001", "PT019"]
 
 [tool.ruff.lint.pydocstyle]
-convention = "google" # Use Google docstring convention.
+convention = "google"
 
 [tool.ruff.lint.isort]
 known-first-party = ["challenge"]
