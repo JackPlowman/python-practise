@@ -15,7 +15,9 @@ from challenge import Solution
         ([9, 9, 9, 9, 9], [1, 0, 0, 0, 0, 0]),
     ],
 )
-def test_solution__plus_one(function_input: list[int], expected_output: list[int]) -> None:
+def test_solution__plus_one(
+    function_input: list[int], expected_output: list[int]
+) -> None:
     # Act
     output = Solution().plusOne(function_input)
     # Assert
