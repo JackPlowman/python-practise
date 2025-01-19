@@ -133,7 +133,7 @@ jobs:
       security-events: write
     strategy:
       matrix:
-        language: [python, typescript, actions]
+        language: [python, actions]
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
