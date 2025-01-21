@@ -63,6 +63,8 @@ jobs:
         with:
           sarif_file: ruff-results.sarif
           wait-for-processing: true
+      - name: Validates Pyproject
+        run: just pyproject-check
       - name: Check Python Code Quality (Ruff)
         run: just ruff-lint
         env:

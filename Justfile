@@ -10,6 +10,10 @@ install:
 test:
     poetry run pytest challenges --cov=. --cov-report=xml
 
+# Validates Pyproject
+pyproject-check:
+    poetry check
+
 # ------------------------------------------------------------------------------
 # Cleaning Commands
 # ------------------------------------------------------------------------------
