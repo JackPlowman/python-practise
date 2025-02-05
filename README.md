@@ -1,10 +1,10 @@
-# Python Practice
+# Python Practise
 
 This is a collection of my Python code challenges and solutions.
 
 ## Table of Contents
 
-- [Python Practice](#python-practice)
+- [Python Practise](#python-practise)
   - [Table of Contents](#table-of-contents)
   - [Challenges](#challenges)
     - [LeetCode](#leetcode)
