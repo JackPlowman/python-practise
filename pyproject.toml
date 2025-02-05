@@ -30,6 +30,10 @@ ignore = [
   "D100",    # Ignore missing docstring in public module
   "T201",    # Ignore print statements
   "N802",    # Ignore function name should be lowercase
+  "D103",    # Ignore missing docstring in public function"
+  "SIM115",
+  "PTH123",
+  "N999",
 ]
 
 fixable = ["ALL"]
