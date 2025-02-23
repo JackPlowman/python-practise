@@ -4,15 +4,11 @@
 
 # Install python dependencies
 install:
-    poetry install
+    uv sync
 
 # Runs unit tests
 test:
-    poetry run pytest challenges --cov=. --cov-report=xml
-
-# Validates Pyproject
-pyproject-check:
-    poetry check
+    uv run pytest challenges --cov=. --cov-report=xml
 
 # ------------------------------------------------------------------------------
 # Cleaning Commands
@@ -45,19 +41,19 @@ ruff-fix:
 
 # Check for Ruff issues
 ruff-lint:
-    poetry run ruff check .
+    uv run ruff check .
 
 # Fix Ruff lint issues
 ruff-lint-fix:
-    poetry run ruff check . --fix
+    uv run ruff check . --fix
 
 # Check for Ruff format issues
 ruff-format:
-    poetry run ruff format --check .
+    uv run ruff format --check .
 
 # Fix Ruff format issues
 ruff-format-fix:
-    poetry run ruff format .
+    uv run ruff format .
 
 # ------------------------------------------------------------------------------
 # Prettier
