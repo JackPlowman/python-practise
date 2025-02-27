@@ -6,8 +6,7 @@ updates:
       - "/"
       - "/.github/actions/setup-dependencies"
     schedule:
-      interval: "weekly"
-      day: "saturday"
+      interval: "daily"
       time: "01:00"
       timezone: "Europe/London"
     target-branch: "main"
@@ -22,8 +21,7 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "saturday"
+      interval: "daily"
       time: "01:00"
       timezone: "Europe/London"
     target-branch: "main"
