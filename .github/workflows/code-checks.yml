@@ -125,7 +125,7 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v3
       - name: Check Justfile Format
-        run: just just-format-check
+        run: just format-check
 
   lefthook-validate:
     name: Lefthook Validate
