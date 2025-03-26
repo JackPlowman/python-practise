@@ -42,7 +42,7 @@ ruff-fix:
 # Check for all Ruff issues
 ruff-checks:
     just ruff-format-check
-    just ruff-lint-check
+    just ruff-lint
 
 # Check for Ruff issues
 ruff-lint:
@@ -53,22 +53,22 @@ ruff-lint-fix:
     uv run ruff check . --fix
 
 # Check for Ruff format issues
-ruff-format:
+ruff-format-check:
     uv run ruff format --check .
 
 # Fix Ruff format issues
-ruff-format-fix:
+ruff-format:
     uv run ruff format .
 
 # ------------------------------------------------------------------------------
 # Prettier
 # ------------------------------------------------------------------------------
 
-# Check files are prettier formatted
+# Check all files with prettier
 prettier-check:
     prettier . --check
 
-# Format files with prettier
+# Format all files with prettier
 prettier-format:
     prettier . --check --write
 
@@ -76,21 +76,37 @@ prettier-format:
 # Justfile
 # ------------------------------------------------------------------------------
 
-# Format the justfile
-just-format:
+# Format Justfile
+format:
     just --fmt --unstable
 
-# Check if the justfile is formatted correctly
-just-format-check:
+# Check Justfile formatting
+format-check:
     just --fmt --check --unstable
 
 # ------------------------------------------------------------------------------
-# Git Leaks
+# Gitleaks
 # ------------------------------------------------------------------------------
 
-# Detect secrets in the repos
+# Run gitleaks detection
 gitleaks-detect:
     gitleaks detect --source .
+
+# ------------------------------------------------------------------------------
+# Lefthook
+# ------------------------------------------------------------------------------
+
+# Validate lefthook config
+lefthook-validate:
+    lefthook validate
+
+# ------------------------------------------------------------------------------
+# Zizmor
+# ------------------------------------------------------------------------------
+
+# Run zizmor checking
+zizmor-check:
+    zizmor .
 
 # ------------------------------------------------------------------------------
 # Git Hooks
@@ -98,6 +114,4 @@ gitleaks-detect:
 
 # Install pre commit hook to run on all commits
 install-git-hooks:
-    cp -f githooks/pre-commit .git/hooks/pre-commit
-    cp -f githooks/post-commit .git/hooks/post-commit
-    chmod ug+x .git/hooks/*
+    lefthook install -f
