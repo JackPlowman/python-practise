@@ -18,7 +18,7 @@ updates:
           - "patch"
           - "minor"
 
-  - package-ecosystem: "pip"
+  - package-ecosystem: "uv"
     directory: "/"
     schedule:
       interval: "daily"
