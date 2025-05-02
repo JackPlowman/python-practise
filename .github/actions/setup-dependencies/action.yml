@@ -5,12 +5,12 @@ runs:
   using: "composite"
   steps:
     - name: Install Python and UV
-      uses: astral-sh/setup-uv@v5.4.0
+      uses: astral-sh/setup-uv@22695119d769bdb6f7032ad67b9bca0ef8c4a174 # v5.4.0
       with:
         pyproject-file: "pyproject.toml"
         enable-cache: true
     - name: Set up Just
-      uses: extractions/setup-just@v3
+      uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
     - name: Install Python Dependencies
       shell: bash
       run: just install
