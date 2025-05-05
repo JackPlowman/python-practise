@@ -6,9 +6,8 @@ updates:
       - "/"
       - "/.github/actions/setup-dependencies"
     schedule:
-      interval: "daily"
-      time: "01:00"
-      timezone: "Europe/London"
+      interval: "cron"
+      cronjob: "30 7 * * *"
     target-branch: "main"
     groups:
       github-actions:
@@ -21,9 +20,8 @@ updates:
   - package-ecosystem: "uv"
     directory: "/"
     schedule:
-      interval: "daily"
-      time: "01:00"
-      timezone: "Europe/London"
+      interval: "cron"
+      cronjob: "30 7 * * *"
     target-branch: "main"
     groups:
       python:
