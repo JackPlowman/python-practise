@@ -7,7 +7,7 @@ updates:
       - "/.github/actions/setup-dependencies"
     schedule:
       interval: "cron"
-      cronjob: "30 7,12,17 * * *"
+      cronjob: "30 7 * * *"
     target-branch: "main"
     groups:
       github-actions:
@@ -21,7 +21,7 @@ updates:
     directory: "/"
     schedule:
       interval: "cron"
-      cronjob: "30 7,12,17 * * *"
+      cronjob: "30 7 * * *"
     target-branch: "main"
     groups:
       python:
