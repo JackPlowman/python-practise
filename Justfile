@@ -71,10 +71,6 @@ ty-check:
 # Other Python Tools
 # ------------------------------------------------------------------------------
 
-# Check for unused code
-vulture:
-    uv run vulture analyser
-
 uv-lock-check:
     uv lock --check
 
