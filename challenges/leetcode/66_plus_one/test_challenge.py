@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 
-from challenge import Solution
+from challenge import Solution  # type: ignore[import]
 
 
 @pytest.mark.parametrize(
