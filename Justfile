@@ -30,8 +30,7 @@ clean:
     \) -print | xargs rm -rfv
 
 # ------------------------------------------------------------------------------
-# Ruff - Python Linting and Formating
-# Set up ruff red-knot when it's ready
+# Ruff - Python Linting and Formatting
 # ------------------------------------------------------------------------------
 
 # Fix all Ruff issues
@@ -42,10 +41,10 @@ ruff-fix:
 # Check for all Ruff issues
 ruff-checks:
     just ruff-format-check
-    just ruff-lint
+    just ruff-lint-check
 
 # Check for Ruff issues
-ruff-lint:
+ruff-lint-check:
     uv run ruff check .
 
 # Fix Ruff lint issues
@@ -57,8 +56,27 @@ ruff-format-check:
     uv run ruff format --check .
 
 # Fix Ruff format issues
-ruff-format:
+ruff-format-fix:
     uv run ruff format .
+
+# ------------------------------------------------------------------------------
+# Ty - Python Type Checking
+# ------------------------------------------------------------------------------
+
+# Check for type issues with Ty
+ty-check:
+    uv run ty check .
+
+# ------------------------------------------------------------------------------
+# Other Python Tools
+# ------------------------------------------------------------------------------
+
+# Check for unused code
+vulture:
+    uv run vulture analyser
+
+uv-lock-check:
+    uv lock --check
 
 # ------------------------------------------------------------------------------
 # Prettier
