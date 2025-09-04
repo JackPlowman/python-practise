@@ -3,8 +3,8 @@ name = "python-practise"
 dynamic = ["version"]
 requires-python = "~=3.13.0"
 dependencies = [
-  "ruff==0.12.7",
-  "pytest==8.4.1",
+  "ruff==0.12.12",
+  "pytest==8.4.2",
   "pytest-cov==6.2.1",
   "ty==0.0.1a16",
 ]
