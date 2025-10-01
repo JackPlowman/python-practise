@@ -153,7 +153,7 @@ pinact-update:
 # Check files format with EditorConfig
 editorconfig-check:
     editorconfig-checker
-    
+
 # ------------------------------------------------------------------------------
 # Git Hooks
 # ------------------------------------------------------------------------------
