@@ -37,4 +37,5 @@ github_actions:
 git_hooks:
   - any:
       - changed-files:
-          - any-glob-to-any-file: [".pre-commit-config.yaml", "**/.pre-commit-hooks.yaml"]
+          - any-glob-to-any-file:
+              [".pre-commit-config.yaml", "**/.pre-commit-hooks.yaml"]
