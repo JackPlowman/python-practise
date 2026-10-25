@@ -4,7 +4,7 @@
 
 # Install python dependencies
 install:
-    uv sync
+    uv sync --locked
 
 # Runs unit tests
 test:
