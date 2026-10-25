@@ -1,3 +1,4 @@
+# Copyright (c) 2026 Jack Plowman
 # https://www.hackerrank.com/challenges/arrays-ds/problem?isFullScreen=true#
 
 import os
