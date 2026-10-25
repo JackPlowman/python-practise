@@ -1,4 +1,3 @@
-# Copyright (c) 2026 Jack Plowman
 from __future__ import annotations
 
 import pytest

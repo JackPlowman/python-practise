@@ -26,6 +26,7 @@ target-version = "py315"
 select = ["ALL"]
 
 ignore = [
+  "CPY001",  # Copyright notices are not required in source files
   "COM812",  # Ignore due to conflict with Ruff formatter
   "ISC001",  # Ignore due to conflict with Ruff formatter
   "PLR2004", # Ignore magic value
